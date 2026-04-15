@@ -1,349 +1,697 @@
 <!DOCTYPE html>
+
 <html lang="ca">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLogístic</title>
 
-    <style>
-        :root {
-            --color-primary: #1a73e8;
-            --color-secondary: #0c3c78;
-            --color-light: #f5f7fa;
-            --color-dark: #1a1a1a;
-            --font-main: "Inter", sans-serif;
-        }
+    <meta charset="UTF-8">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: var(--font-main);
-            background: var(--color-light);
-            color: var(--color-dark);
-        }
+    <title>FoodLogístic</title>
 
-        header {
-            background: white;
-            padding: 1rem 2rem;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
 
-        nav ul {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
 
-        nav a {
-            text-decoration: none;
-            color: var(--color-dark);
-            font-weight: 600;
-        }
+    <style>
 
-        nav a:hover {
-            color: var(--color-primary);
-        }
+        :root {
 
-        /* HERO */
-        .hero {
-            background: url('https://static.vecteezy.com/system/resources/previews/011/999/590/non_2x/trucking-transportation-cartoon-illustration-with-cargo-delivery-services-or-cardboard-box-sent-to-the-consumer-in-flat-style-design-vector.jpg') center/cover no-repeat;
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
+            --color-primary: #1a73e8;
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-        }
+            --color-secondary: #0c3c78;
 
-        section {
-            padding: 4rem 2rem;
-            max-width: 1100px;
-            margin: auto;
-        }
+            --color-light: #f5f7fa;
 
-        h2 {
-            margin-bottom: 1.5rem;
-            color: var(--color-secondary);
-        }
+            --color-dark: #1a1a1a;
 
-        /* SERVEIS */
-        .serveis-grid {
-            display: grid;
-            gap: 2rem;
-        }
+            --font-main: "Inter", sans-serif;
 
-        .servei {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: 0.2s ease;
-        }
+        }
 
-        .servei:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-        }
 
-        .servei img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
 
-        .servei h3 {
-            font-size: 1.3rem;
-            margin-bottom: .5rem;
-        }
+        * {
 
-        .servei p {
-            margin-bottom: .4rem;
-            line-height: 1.5rem;
-        }
+            margin: 0;
 
-        /* CONTACTE */
-        .contacte-wrapper {
-            display: grid;
-            gap: 2rem;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+            padding: 0;
 
-        .contacte-info {
-            background: var(--color-primary);
-            color: white;
-            padding: 2.5rem;
-        }
+            box-sizing: border-box;
 
-        .contacte-info h3 {
-            margin-bottom: 1rem;
-        }
+        }
 
-        .contacte-info p {
-            margin-bottom: 1rem;
-        }
 
-        .contacte-form {
-            padding: 2.5rem;
-        }
 
-        form {
-            display: grid;
-            gap: 1rem;
-        }
+        body {
 
-        input, textarea, select {
-            padding: 0.8rem;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
+            font-family: var(--font-main);
 
-        button {
-            background: var(--color-primary);
-            color: white;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
+            background: var(--color-light);
 
-        button:hover {
-            background: var(--color-secondary);
-        }
+            color: var(--color-dark);
 
-        footer {
-            background: var(--color-dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
+        }
 
-        @media (min-width: 768px) {
-            .serveis-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
 
-            .contacte-wrapper {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-    </style>
+
+        header {
+
+            background: white;
+
+            padding: 1rem 2rem;
+
+            border-bottom: 1px solid #ddd;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+
+        }
+
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 1.5rem;
+
+            list-style: none;
+
+        }
+
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: var(--color-dark);
+
+            font-weight: 600;
+
+        }
+
+
+
+        nav a:hover {
+
+            color: var(--color-primary);
+
+        }
+
+
+
+        /* HERO */
+
+        .hero {
+
+            background: url('https://static.vecteezy.com/system/resources/previews/011/999/590/non_2x/trucking-transportation-cartoon-illustration-with-cargo-delivery-services-or-cardboard-box-sent-to-the-consumer-in-flat-style-design-vector.jpg') center/cover no-repeat;
+
+            color: white;
+
+            padding: 6rem 2rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .hero h1 {
+
+            font-size: 2.8rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        section {
+
+            padding: 4rem 2rem;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+        }
+
+
+
+        h2 {
+
+            margin-bottom: 1.5rem;
+
+            color: var(--color-secondary);
+
+        }
+
+
+
+        /* SERVEIS */
+
+        .serveis-grid {
+
+            display: grid;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .servei {
+
+            background: white;
+
+            padding: 1.5rem;
+
+            border-radius: 10px;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+            transition: 0.2s ease;
+
+        }
+
+
+
+        .servei:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+
+        }
+
+
+
+        .servei img {
+
+            width: 100%;
+
+            border-radius: 10px;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .servei h3 {
+
+            font-size: 1.3rem;
+
+            margin-bottom: .5rem;
+
+        }
+
+
+
+        .servei p {
+
+            margin-bottom: .4rem;
+
+            line-height: 1.5rem;
+
+        }
+
+
+
+        /* CONTACTE */
+
+        .contacte-wrapper {
+
+            display: grid;
+
+            gap: 2rem;
+
+            background: white;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        }
+
+
+
+        .contacte-info {
+
+            background: var(--color-primary);
+
+            color: white;
+
+            padding: 2.5rem;
+
+        }
+
+
+
+        .contacte-info h3 {
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .contacte-info p {
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .contacte-form {
+
+            padding: 2.5rem;
+
+        }
+
+
+
+        form {
+
+            display: grid;
+
+            gap: 1rem;
+
+        }
+
+
+
+        input, textarea, select {
+
+            padding: 0.8rem;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            font-size: 1rem;
+
+        }
+
+
+
+        button {
+
+            background: var(--color-primary);
+
+            color: white;
+
+            padding: 0.8rem;
+
+            border: none;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            font-size: 1rem;
+
+        }
+
+
+
+        button:hover {
+
+            background: var(--color-secondary);
+
+        }
+
+
+
+        footer {
+
+            background: var(--color-dark);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 2rem;
+
+            margin-top: 3rem;
+
+        }
+
+
+
+        @media (min-width: 768px) {
+
+            .serveis-grid {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+
+
+            .contacte-wrapper {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 
 <body>
 
+
+
 <header>
-    <nav>
-        <ul>
-            <li><a href="#inici">Inici</a></li>
-            <li><a href="#serveis">Serveis</a></li>
-            <li><a href="#nosaltres">Nosaltres</a></li>
-            <li><a href="#contacte">Contacte</a></li>
-        </ul>
-    </nav>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#inici">Inici</a></li>
+
+            <li><a href="#serveis">Serveis</a></li>
+
+            <li><a href="#nosaltres">Nosaltres</a></li>
+
+            <li><a href="#contacte">Contacte</a></li>
+
+        </ul>
+
+    </nav>
+
 </header>
 
+
+
 <section id="inici" class="hero">
-    <h1>FoodLogístic</h1>
-    <p>Solucions logístiques eficients per al sector alimentari.</p>
+
+    <h1>FoodLogístic</h1>
+
+    <p>Solucions logístiques eficients per al sector alimentari.</p>
+
 </section>
+
+
 
 <!-- SERVEIS AMB IMATGES FINALS -->
+
 <section id="serveis">
-    <h2>Serveis</h2>
 
-    <div class="serveis-grid">
+    <h2>Serveis</h2>
 
-        <div class="servei">
-            <img src="https://img.freepik.com/vector-premium/automovil-lleno-verduras-frutas-granja-agricultura-tiempo-verano_133260-8592.jpg" alt="Transport alimentari">
-            <h3>Transport Alimentari</h3>
-            <p>Distribució ràpida i segura amb control de temperatura.</p>
-        </div>
 
-        <div class="servei">
-            <img src="https://img.freepik.com/vector-gratis/almacen-logistico-cajas-carton-maquina-montacargas_24908-59357.jpg" alt="Magatzematge">
-            <h3>Magatzematge</h3>
-            <p>Instal·lacions modernes amb zones refrigerades.</p>
-        </div>
 
-        <div class="servei">
-            <img src="https://i.pinimg.com/736x/3a/e3/e1/3ae3e1dde75912c018ddb557b25f8609.jpg" alt="Gestió logística">
-            <h3>Gestió Logística</h3>
-            <p>Planificació integral per optimitzar rutes i costos.</p>
-        </div>
+    <div class="serveis-grid">
 
-    </div>
+
+
+        <div class="servei">
+
+            <img src="https://img.freepik.com/vector-premium/automovil-lleno-verduras-frutas-granja-agricultura-tiempo-verano_133260-8592.jpg" alt="Transport alimentari">
+
+            <h3>Transport Alimentari</h3>
+
+            <p>Distribució ràpida i segura amb control de temperatura.</p>
+
+        </div>
+
+
+
+        <div class="servei">
+
+            <img src="https://img.freepik.com/vector-gratis/almacen-logistico-cajas-carton-maquina-montacargas_24908-59357.jpg" alt="Magatzematge">
+
+            <h3>Magatzematge</h3>
+
+            <p>Instal·lacions modernes amb zones refrigerades.</p>
+
+        </div>
+
+
+
+        <div class="servei">
+
+            <img src="https://i.pinimg.com/736x/3a/e3/e1/3ae3e1dde75912c018ddb557b25f8609.jpg" alt="Gestió logística">
+
+            <h3>Gestió Logística</h3>
+
+            <p>Planificació integral per optimitzar rutes i costos.</p>
+
+        </div>
+
+
+
+    </div>
+
 </section>
+
+
 
 <!-- NOSALTRES -->
+
 <section id="nosaltres">
-    <h2>Nosaltres</h2>
 
-    <div style="
-        background:white;
-        padding:2rem;
-        border-radius:10px;
-        box-shadow:0 2px 10px rgba(0,0,0,0.08);
-        line-height:1.6rem;
-    ">
-        <h3 style="color:var(--color-secondary); margin-bottom:1rem;">
-            La nostra essència
-        </h3>
+    <h2>Nosaltres</h2>
 
-        <p style="margin-bottom:1rem;">
-            Amb més de 20 anys d’experiència en el sector, FoodLogístic és molt més que una empresa de transport:
-            som el pont que connecta productors, distribuïdors i consumidors garantint que cada aliment arribi
-            fresc, segur i puntual.
-        </p>
 
-        <p style="margin-bottom:1rem;">
-            Entenem que en el sector alimentari cada minut compta i cada grau importa. Per això invertim en
-            tecnologia, innovació i processos que asseguren la màxima qualitat en tota la cadena logística.
-        </p>
 
-        <p style="margin-bottom:1rem;">
-            El nostre compromís és oferir tranquil·litat als nostres clients, aportant solucions adaptades,
-            transparència operativa i un servei 24/7 que garanteix continuïtat i fiabilitat.
-        </p>
+    <div style="
 
-        <div style="display:flex; gap:2rem; margin-top:1.5rem;">
-            <div>
-                <h3 style="font-size:2rem; color:var(--color-primary);">200+</h3>
-                <p>Clients Actius</p>
-            </div>
+        background:white;
 
-            <div>
-                <h3 style="font-size:2rem; color:var(--color-primary);">24/7</h3>
-                <p>Suport Logístic</p>
-            </div>
-        </div>
-    </div>
+        padding:2rem;
+
+        border-radius:10px;
+
+        box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+        line-height:1.6rem;
+
+    ">
+
+        <h3 style="color:var(--color-secondary); margin-bottom:1rem;">
+
+            La nostra essència
+
+        </h3>
+
+
+
+        <p style="margin-bottom:1rem;">
+
+            Amb més de 20 anys d’experiència en el sector, FoodLogístic és molt més que una empresa de transport:
+
+            som el pont que connecta productors, distribuïdors i consumidors garantint que cada aliment arribi
+
+            fresc, segur i puntual.
+
+        </p>
+
+
+
+        <p style="margin-bottom:1rem;">
+
+            Entenem que en el sector alimentari cada minut compta i cada grau importa. Per això invertim en
+
+            tecnologia, innovació i processos que asseguren la màxima qualitat en tota la cadena logística.
+
+        </p>
+
+
+
+        <p style="margin-bottom:1rem;">
+
+            El nostre compromís és oferir tranquil·litat als nostres clients, aportant solucions adaptades,
+
+            transparència operativa i un servei 24/7 que garanteix continuïtat i fiabilitat.
+
+        </p>
+
+
+
+        <div style="display:flex; gap:2rem; margin-top:1.5rem;">
+
+            <div>
+
+                <h3 style="font-size:2rem; color:var(--color-primary);">200+</h3>
+
+                <p>Clients Actius</p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3 style="font-size:2rem; color:var(--color-primary);">24/7</h3>
+
+                <p>Suport Logístic</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
 
 <section id="contacte">
-    <h2>Contacte</h2>
 
-    <div class="contacte-wrapper">
+    <h2>Contacte</h2>
 
-        <div class="contacte-info">
-            <h3>Parlem?</h3>
-            <p>Sol·licita una auditoria de la teva cadena de subministrament sense compromís.</p>
 
-            <p> Carrer de la Logística, 45<br>08040 Barcelona</p>
-            <p> +34 930 000 000</p>
-            <p> info@foodlogistic.cat</p>
-        </div>
 
-        <div class="contacte-form">
-            <form id="contactForm">
-                <input type="text" id="nom" placeholder="Nom" required>
-                <input type="email" id="email" placeholder="Correu electrònic" required>
+    <div class="contacte-wrapper">
 
-                <select id="servei">
-                    <option>Tipus de Servei</option>
-                    <option>Transport Refrigerat</option>
-                    <option>Magatzematge</option>
-                    <option>Distribució</option>
-                </select>
 
-                <textarea id="missatge" rows="5" placeholder="Explica’ns les teves necessitats..." required></textarea>
 
-                <button type="submit">Enviar Sol·licitud</button>
-            </form>
+        <div class="contacte-info">
 
-            <p id="formResponse" style="margin-top:1rem; font-weight:600;"></p>
-        </div>
+            <h3>Parlem?</h3>
 
-    </div>
+            <p>Sol·licita una auditoria de la teva cadena de subministrament sense compromís.</p>
+
+
+
+            <p>📍 Carrer de la Logística, 45<br>08040 Barcelona</p>
+
+            <p>📞 +34 930 000 000</p>
+
+            <p>✉️ info@foodlogistic.cat</p>
+
+        </div>
+
+
+
+        <div class="contacte-form">
+
+            <form id="contactForm">
+
+                <input type="text" id="nom" placeholder="Nom" required>
+
+                <input type="email" id="email" placeholder="Correu electrònic" required>
+
+
+
+                <select id="servei">
+
+                    <option>Tipus de Servei</option>
+
+                    <option>Transport Refrigerat</option>
+
+                    <option>Magatzematge</option>
+
+                    <option>Distribució</option>
+
+                </select>
+
+
+
+                <textarea id="missatge" rows="5" placeholder="Explica’ns les teves necessitats..." required></textarea>
+
+
+
+                <button type="submit">Enviar Sol·licitud</button>
+
+            </form>
+
+
+
+            <p id="formResponse" style="margin-top:1rem; font-weight:600;"></p>
+
+        </div>
+
+
+
+    </div>
+
 </section>
 
+
+
 <footer>
-    <p>© 2026 FoodLogístic — Solucions Logístiques Alimentàries</p>
+
+    <p>© 2026 FoodLogístic — Solucions Logístiques Alimentàries</p>
+
 </footer>
 
+
+
 <script>
+
 (function() {
-    const form = document.getElementById("contactForm");
-    const response = document.getElementById("formResponse");
 
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
+    const form = document.getElementById("contactForm");
 
-        const nom = document.getElementById("nom").value;
-        response.textContent = `Gràcies, ${nom}. Hem rebut la teva sol·licitud.`;
+    const response = document.getElementById("formResponse");
 
-        form.reset();
-    });
+
+
+    form.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+
+
+        const nom = document.getElementById("nom").value;
+
+        response.textContent = `Gràcies, ${nom}. Hem rebut la teva sol·licitud.`;
+
+
+
+        form.reset();
+
+    });
+
 })();
+
 </script>
-<!-- Default Statcounter code for FoodLogístic
+
+<!-- Default Statcounter code for FoodLogístic
+
 https://anthonymilla.github.io/Web-corporativa-FoodLogistic/ -->
+
 <script type="text/javascript">
+
 var sc_project=13221950; 
+
 var sc_invisible=1; 
+
 var sc_security="83e2dd94"; 
+
 </script>
+
 <script type="text/javascript"
+
 src="https://www.statcounter.com/counter/counter.js" async></script>
+
 <noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+
 Statcounter" href="https://statcounter.com/" target="_blank"><img
+
 class="statcounter" src="https://c.statcounter.com/13221950/0/83e2dd94/1/"
+
 alt="Web Analytics Made Easy - Statcounter"
+
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
 <!-- End of Statcounter Code -->
+
 </body>
+
 </html>
